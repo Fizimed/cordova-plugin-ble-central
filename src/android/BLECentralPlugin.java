@@ -551,10 +551,10 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
 
     private void findLowEnergyDevices(CallbackContext callbackContext, UUID[] serviceUUIDs, int scanSeconds) {
 
-        if (!locationServicesEnabled()) {
-            callbackContext.error("Location Services are disabled");
-            return;
-        }
+       // if (!locationServicesEnabled()) {
+       //     callbackContext.error("Location Services are disabled");
+       //     return;
+       // }
 
         if(!PermissionHelper.hasPermission(this, ACCESS_COARSE_LOCATION)) {
             // save info so we can call this method again after permissions are granted
