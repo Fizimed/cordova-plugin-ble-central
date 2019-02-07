@@ -1,8 +1,5 @@
-package com.siliconlabs.bledemo.ble;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import com.siliconlabs.bledemo.bluetoothdatamodel.parsing.ScanRecordParser;
 
 class BLEScanCallbackJB2 implements BluetoothAdapter.LeScanCallback {
     final BlueToothService service;

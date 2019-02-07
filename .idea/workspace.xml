@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ff9736c-caee-49da-8690-945ea4479c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/android/BLEScanCallbackJB2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/BLECentralPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/BLECentralPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/Peripheral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/Peripheral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,15 +19,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/BLECentralPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="589" column="16" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
+            <state relative-caret-position="415">
+              <caret line="544" column="10" lean-forward="true" selection-start-line="544" selection-start-column="10" selection-end-line="544" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26921#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#13693#13694#0" expanded="true" />
                 <element signature="e#13763#13764#0" expanded="true" />
-                <element signature="e#25996#25997#0" expanded="true" />
-                <element signature="e#26134#26135#0" expanded="true" />
+                <element signature="e#25985#25986#0" expanded="true" />
+                <element signature="e#26123#26124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/android/BLECommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,10 +60,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/BLEScanCallbackJB2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="210">
+              <caret line="14" column="76" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,11 +83,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1367">
+            <state relative-caret-position="180">
               <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
                 <element signature="e#0#5455#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/android/Peripheral.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7385#7386#0" expanded="true" />
+                <element signature="e#7431#7432#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,6 +117,8 @@
       <find>scan</find>
       <find>scan(</find>
       <find>locationServicesEnabled</find>
+      <find>startDiscovery</find>
+      <find>Context</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,23 +166,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="android" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cordova-plugin-ble-central" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-ble-central" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordova-plugin-ble-central" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-ble-central" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordova-plugin-ble-central" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-ble-central" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -167,7 +175,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549469916431" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549527014103" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -200,12 +208,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549449380610</updated>
-      <workItem from="1549449382603" duration="7576000" />
+      <workItem from="1549449382603" duration="10004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7576000" />
+    <option name="totallyTimeSpent" value="10004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -257,16 +265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/Peripheral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#32879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/browser/BLECentralPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -281,27 +279,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ios/BLECentralPlugin.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1367">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#5455#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/BLECommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/UUIDHelper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -321,37 +298,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/BLEScanCallbackJB2.java">
+    <entry file="file://$PROJECT_DIR$/src/android/BLECommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/BLEScanCallbackJB2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="76" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#5455#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/Peripheral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7385#7386#0" expanded="true" />
+            <element signature="e#7431#7432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/BLECentralPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="589" column="16" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
+        <state relative-caret-position="415">
+          <caret line="544" column="10" lean-forward="true" selection-start-line="544" selection-start-column="10" selection-end-line="544" selection-end-column="10" />
           <folding>
             <element signature="e#0#26921#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#13693#13694#0" expanded="true" />
             <element signature="e#13763#13764#0" expanded="true" />
-            <element signature="e#25996#25997#0" expanded="true" />
-            <element signature="e#26134#26135#0" expanded="true" />
+            <element signature="e#25985#25986#0" expanded="true" />
+            <element signature="e#26123#26124#0" expanded="true" />
           </folding>
         </state>
       </provider>

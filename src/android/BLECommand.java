@@ -1,5 +1,3 @@
-package com.megster.cordova.ble.central;
-
 import org.apache.cordova.CallbackContext;
 
 import java.util.UUID;
@@ -14,8 +12,6 @@ class BLECommand {
     public static int REGISTER_NOTIFY = 10001;
     public static int REMOVE_NOTIFY = 10002;
     public static int READ_RSSI = 10003;
-    // BluetoothGattCharacteristic.WRITE_TYPE_NO_RESPONSE
-    // BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT
 
     private CallbackContext callbackContext;
     private UUID serviceUUID;
