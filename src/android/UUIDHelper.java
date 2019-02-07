@@ -1,3 +1,5 @@
+package com.megster.cordova.ble.central;
+
 // (c) 2104 Don Coleman
 //
 // Licensed under the Apache License, Version 2.0 (the "License");

@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+package com.megster.cordova.ble.central;
+
 import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -19,7 +21,6 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.ScanCallback;
-import android.bluetooth.le.ScanFilter;
 import android.bluetooth.le.ScanSettings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,6 +28,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Handler;
 import android.provider.Settings;
 import org.apache.cordova.*;
 import org.json.JSONArray;
@@ -74,6 +76,7 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
 
     // callbacks
     CallbackContext discoverCallback;
+    private ScanCallback bleScannerCallback;
     private CallbackContext enableBluetoothCallback;
 
     private static final String TAG = "BLEPlugin";
@@ -533,10 +536,11 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
     }
 
     private void findLowEnergyDevices(CallbackContext callbackContext, UUID[] serviceUUIDs, int scanSeconds) {
-
-        if (bluetoothAdapter == null) {
-            bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-            bluetoothAdapter = bluetoothManager.getAdapter();
+        // return error if already scanning
+        if (bluetoothAdapter.isDiscovering()) {
+            LOG.w(TAG, "Tried to start scan while already running.");
+            callbackContext.error("Tried to start scan while already running.");
+            return;
         }
 
         // clear non-connected cached peripherals
@@ -552,29 +556,38 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
             }
         }
 
-        if (useBLE) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                ScanCallback scannerCallback = new BLEScanCallbackLollipop(this);
-                bleScannerCallback = scannerCallback;
-                ScanSettings settings = new ScanSettings.Builder()
-                        .setReportDelay(scanSeconds)
-                        .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build();
-                bluetoothAdapter.getBluetoothLeScanner().startScan((List<ScanFilter>) listeners.getScanFilterL(), settings, scannerCallback);
-            } else {
-                BluetoothAdapter.LeScanCallback scannerCallback = new BLEScanCallbackJB2(this);
-                bleScannerCallback = scannerCallback;
-                if (!bluetoothAdapter.startLeScan(serviceUUIDs, scannerCallback)) {
-                    onDiscoveryCanceled();
-                }
-            }
-        } else {
-            if (!bluetoothAdapter.startDiscovery()) {
-                onDiscoveryCanceled();
-            }
-        }
-    }
+        discoverCallback = callbackContext;
 
-    void onDiscoveryCanceled() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ScanCallback scannerCallback = new BLEScanCallbackLollipop(this);
+            bleScannerCallback = scannerCallback;
+            ScanSettings settings = new ScanSettings.Builder()
+                    .setReportDelay(0)
+                    .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build();
+            bluetoothAdapter.getBluetoothLeScanner().startScan(new ArrayList<>(), settings, scannerCallback);
+        } else {
+            bluetoothAdapter.startLeScan(this);
+        }
+
+        if (scanSeconds > 0) {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        LOG.d(TAG, "Stopping Scan");
+                        //todo
+                        BLECentralPlugin.this.bluetoothAdapter.getBluetoothLeScanner().stopScan(bleScannerCallback);
+                    } else {
+                        LOG.d(TAG, "Stopping Scan");
+                        BLECentralPlugin.this.bluetoothAdapter.stopLeScan(BLECentralPlugin.this);
+                    }
+
+
+                }
+            }, scanSeconds * 1000);
+        }
+
         PluginResult result = new PluginResult(PluginResult.Status.NO_RESULT);
         result.setKeepCallback(true);
         callbackContext.sendPluginResult(result);
@@ -676,5 +689,4 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
     private void resetScanOptions() {
         this.reportDuplicates = false;
     }
-
 }

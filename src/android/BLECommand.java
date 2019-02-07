@@ -1,11 +1,9 @@
+package com.megster.cordova.ble.central;
+
 import org.apache.cordova.CallbackContext;
 
 import java.util.UUID;
 
-/**
- * Android BLE stack is async but doesn't queue commands, so it ignore additional commands when processing. WTF?
- * This is an object to encapsulate the command data for queuing
- */
 class BLECommand {
     // Types
     public static int READ = 10000;
