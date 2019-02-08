@@ -6,12 +6,14 @@ import android.bluetooth.le.ScanResult;
 import android.os.Build;
 import android.os.Handler;
 
+import java.util.List;
+
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class BLEScanCallbackLollipop extends ScanCallback {
-    final BLECentralPlugin service;
+    final com.megster.cordova.ble.central.BLECentralPlugin service;
     final Handler handler;
 
-    BLEScanCallbackLollipop(BLECentralPlugin service) {
+    BLEScanCallbackLollipop(com.megster.cordova.ble.central.BLECentralPlugin service) {
         this.service = service;
         this.handler = new Handler();
     }
@@ -20,5 +22,23 @@ class BLEScanCallbackLollipop extends ScanCallback {
     public void onScanResult(int callbackType, ScanResult result) {
         service.onLeScan(result.getDevice(), result.getRssi(), result.getScanRecord() == null ? null : result.getScanRecord().getBytes());
     }
-}
 
+    @Override
+    public void onBatchScanResults(List<ScanResult> results) {
+        for (ScanResult result : results) {
+            service.onLeScan(result.getDevice(), result.getRssi(), result.getScanRecord() == null ? null : result.getScanRecord().getBytes());
+        }
+    }
+
+    @Override
+    public void onScanFailed(int errorCode) {
+        if (errorCode != SCAN_FAILED_ALREADY_STARTED) {
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    //  service.onDiscoveryCanceled();
+                }
+            });
+        }
+    }
+}

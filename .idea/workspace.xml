@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="474">
+              <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -75,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/BLECentralPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="-80">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#26663#0" expanded="true" />
@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/UUIDHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/android/ScanRecordCompat.java" />
         <option value="$PROJECT_DIR$/src/android/Objects.java" />
         <option value="$PROJECT_DIR$/src/android/ScanRecordParser.java" />
@@ -192,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/android/Helper.java" />
         <option value="$PROJECT_DIR$/src/android/Peripheral.java" />
         <option value="$PROJECT_DIR$/src/android/UUIDHelper.java" />
+        <option value="$PROJECT_DIR$/plugin.xml" />
       </list>
     </option>
   </component>
@@ -241,7 +241,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549561442565" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549619177817" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -279,15 +279,16 @@
       <option name="presentableId" value="Default" />
       <updated>1549449380610</updated>
       <workItem from="1549449382603" duration="13686000" />
-      <workItem from="1549533846760" duration="1872000" />
+      <workItem from="1549533846760" duration="3564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15558000" />
+    <option name="totallyTimeSpent" value="17250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848023" visible="true" weight="0.1544196" />
       <window_info id="Structure" order="1" sideWeight="0.5005066" side_tool="true" weight="0.14962727" />
@@ -303,7 +304,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32928064" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32908705" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -428,30 +429,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/BluetoothUuid.java" />
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/src/android/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="210">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/BLECentralPlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/android/Peripheral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="210">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
-            <element signature="e#0#26663#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#4589#4590#0" expanded="true" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4692#4693#0" expanded="true" />
-            <element signature="e#13892#13893#0" expanded="true" />
-            <element signature="e#13962#13963#0" expanded="true" />
-            <element signature="e#25889#25890#0" expanded="true" />
-            <element signature="e#25943#25944#0" expanded="true" />
-            <element signature="e#26036#26037#0" expanded="true" />
-            <element signature="e#26081#26082#0" expanded="true" />
+            <element signature="e#7361#7362#0" expanded="true" />
+            <element signature="e#7407#7408#0" expanded="true" />
+            <element signature="e#11626#11627#0" expanded="true" />
+            <element signature="e#11658#11659#0" expanded="true" />
+            <element signature="e#11695#11696#0" expanded="true" />
+            <element signature="e#11728#11729#0" expanded="true" />
+            <element signature="e#11770#11771#0" expanded="true" />
+            <element signature="e#11799#11800#0" expanded="true" />
+            <element signature="e#16494#16495#0" expanded="true" />
+            <element signature="e#16532#16533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/UUIDHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -486,43 +499,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/Helper.java">
+    <entry file="file://$PROJECT_DIR$/src/android/BLECentralPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="-80">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
+            <element signature="e#0#26663#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#4589#4590#0" expanded="true" />
+            <element signature="e#4626#4627#0" expanded="true" />
+            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4692#4693#0" expanded="true" />
+            <element signature="e#13892#13893#0" expanded="true" />
+            <element signature="e#13962#13963#0" expanded="true" />
+            <element signature="e#25889#25890#0" expanded="true" />
+            <element signature="e#25943#25944#0" expanded="true" />
+            <element signature="e#26036#26037#0" expanded="true" />
+            <element signature="e#26081#26082#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/Peripheral.java">
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7361#7362#0" expanded="true" />
-            <element signature="e#7407#7408#0" expanded="true" />
-            <element signature="e#11626#11627#0" expanded="true" />
-            <element signature="e#11658#11659#0" expanded="true" />
-            <element signature="e#11695#11696#0" expanded="true" />
-            <element signature="e#11728#11729#0" expanded="true" />
-            <element signature="e#11770#11771#0" expanded="true" />
-            <element signature="e#11799#11800#0" expanded="true" />
-            <element signature="e#16494#16495#0" expanded="true" />
-            <element signature="e#16532#16533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/UUIDHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="474">
+          <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
         </state>
       </provider>
     </entry>
