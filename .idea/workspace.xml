@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ff9736c-caee-49da-8690-945ea4479c50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cordova-plugin-ble-central.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cordova-plugin-ble-central.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/BLECentralPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/BLECentralPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/BLECommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/BLECommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/BLEScanCallbackJB2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/BLEScanCallbackLollipop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/Peripheral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/Peripheral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/UUIDHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/UUIDHelper.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +241,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549555767179" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549561442565" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -288,17 +279,17 @@
       <option name="presentableId" value="Default" />
       <updated>1549449380610</updated>
       <workItem from="1549449382603" duration="13686000" />
-      <workItem from="1549533846760" duration="1214000" />
+      <workItem from="1549533846760" duration="1872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14900000" />
+    <option name="totallyTimeSpent" value="15558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848023" visible="true" weight="0.1544196" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848023" visible="true" weight="0.1544196" />
       <window_info id="Structure" order="1" sideWeight="0.5005066" side_tool="true" weight="0.14962727" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -312,7 +303,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32928064" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32928064" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
