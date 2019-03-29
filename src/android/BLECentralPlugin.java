@@ -538,7 +538,7 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
     private void findLowEnergyDevices(CallbackContext callbackContext, UUID[] serviceUUIDs, int scanSeconds) {
         // return error if already scanning
 
-        if(!PermissionHelper.hasPermission(this, ACCESS_COARSE_LOCATION)) {
+        if (!PermissionHelper.hasPermission(this, ACCESS_COARSE_LOCATION)) {
             // save info so we can call this method again after permissions are granted
             permissionCallback = callbackContext;
             this.serviceUUIDs = serviceUUIDs;
@@ -587,7 +587,9 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         LOG.d(TAG, "Stopping Scan");
                         //todo
-                        BLECentralPlugin.this.bluetoothAdapter.getBluetoothLeScanner().stopScan(bleScannerCallback);
+                        if (BLECentralPlugin.this.bluetoothAdapter != null) {
+                            BLECentralPlugin.this.bluetoothAdapter.getBluetoothLeScanner().stopScan(bleScannerCallback);
+                        }
                     } else {
                         LOG.d(TAG, "Stopping Scan");
                         BLECentralPlugin.this.bluetoothAdapter.stopLeScan(BLECentralPlugin.this);
