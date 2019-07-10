@@ -103,6 +103,12 @@ static NSDictionary *dataToArrayBuffer(NSData* data) {
 - (NSDictionary *) serializableAdvertisementData: (NSDictionary *) advertisementData {
     NSMutableDictionary *dict = [advertisementData mutableCopy];
 
+    // Remove the device address data
+    NSData *btaddr = [dict objectForKey:@"kCBAdvDataLeBluetoothDeviceAddress"];
+        if (btaddr) {
+            [dict removeObjectForKey:@"kCBAdvDataLeBluetoothDeviceAddress"];
+        }
+
     // Service Data is a dictionary of CBUUID and NSData
     // Convert to String keys with Array Buffer values
     NSMutableDictionary *serviceData = [dict objectForKey:CBAdvertisementDataServiceDataKey];
