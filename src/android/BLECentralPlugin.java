@@ -21,6 +21,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.ScanCallback;
+import android.bluetooth.le.ScanFilter;
 import android.bluetooth.le.ScanSettings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -29,6 +30,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Handler;
+import android.os.ParcelUuid;
 import android.provider.Settings;
 import org.apache.cordova.*;
 import org.json.JSONArray;
@@ -317,7 +319,6 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
                 bonded.put(p.asJSONObject());
             }
         }
-
         callbackContext.success(bonded);
     }
 
@@ -574,9 +575,23 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
             ScanSettings settings = new ScanSettings.Builder()
                     .setReportDelay(0)
                     .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build();
-            bluetoothAdapter.getBluetoothLeScanner().startScan(new ArrayList<>(), settings, scannerCallback);
+            List<ScanFilter> filters = new ArrayList<>();
+            if (serviceUUIDs != null) {
+                ScanFilter.Builder builder = new ScanFilter.Builder();
+                String serviceUuidString = serviceUUIDs[0].toString();
+                String serviceUuidMaskString = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF";
+                ParcelUuid parcelUuid = ParcelUuid.fromString(serviceUuidString);
+                ParcelUuid parcelUuidMask = ParcelUuid.fromString(serviceUuidMaskString);
+                builder.setServiceUuid(parcelUuid, parcelUuidMask);
+                filters = Collections.singletonList(builder.build());
+            }
+            bluetoothAdapter.getBluetoothLeScanner().startScan(filters, settings, scannerCallback);
         } else {
-            bluetoothAdapter.startLeScan(this);
+            if (serviceUUIDs != null) {
+                bluetoothAdapter.startLeScan(serviceUUIDs, this);
+            } else {
+                bluetoothAdapter.startLeScan(this);
+            }
         }
 
         if (scanSeconds > 0) {
