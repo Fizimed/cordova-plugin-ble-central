@@ -576,7 +576,7 @@ public class BLECentralPlugin extends CordovaPlugin implements BluetoothAdapter.
                     .setReportDelay(0)
                     .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build();
             List<ScanFilter> filters = new ArrayList<>();
-            if (serviceUUIDs != null) {
+            if (serviceUUIDs != null && serviceUUIDs.length > 0) {
                 ScanFilter.Builder builder = new ScanFilter.Builder();
                 String serviceUuidString = serviceUUIDs[0].toString();
                 String serviceUuidMaskString = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF";
